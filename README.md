@@ -1,114 +1,118 @@
-# Audio Modification Library
-AudModLib is a compatibility framework that allows the seamless integration of multiple audio mods for Magisk installs. [More details in support thread](https://forum.xda-developers.com/apps/magisk/mod-audio-modification-library-t3745466).
-
-## Change Log
-### v1.8 - 7.20.2018
-* Fix icewizard always showing error
-* Add capability to replace libraries and effects with patch_cfgs function (-r)
-* Change pre_processing patch_cfgs option to -q
-* Fix bug with proxy effects
-* Fix bugs with osp with xml files
-* Fix bug with squaresound
-
-### v1.7.2 - 7.2.2018
-* Updated ice wizard patches
-* Delete osp rather than comment out
-
-### v1.7.1 - 6.27.2018
-* Bug fix with osp_detect - should patch all cfgs now
-
-### v1.7 - 6.19.2018
-* Added support for mixer_gains, audio_device, and sapa_feature xml files
-* Added RUNONCE option for custom AML scripts - allows them to only be run once instead of for each audio cfg file. Use this if your mod doesn't have cfg patches
-* Added COUNT variable. Can be used by custom AML scripts to determine how many times script has been run. Use this if your mod has cfg patches and other audio file patches
-* Fixed old bug with uninstall file restoration
-* Fixed bugs with boot script
-* Removed need to specify file with patch_cfgs function - make sure you update your aml.sh script for this
-* Added ainur squaresound
-
-### v1.6.2 - 6.15.2018
-* Fixed mixed up libraries/effects
-* Fixed bug with acp
-
-### v1.6.1 - 6.15.2018
-* Bug fixes for xml files
-
-### v1.6 - 6.14.2018
-* Redid patching backend - huge thanks to Rezmir99 @xda-developers
-* Fully integrated aml.sh functionality - users can now user patch_cfgs function and LIBDIR variable like in AudioModificationLibrary.sh script - see support thread for instructions
-
-### v1.5.7 - 4.26.2018
-* Add capability to import any audio mod with a ".aml.sh" file in the root of its magisk directory
-
-### v1.5.6 - 4.12.2018
-* vendor file fix for devices with separate vendor partitions
-* misc fixes
-
-### v1.5.5 - 4.12.2018
-* osp_detect fix
-
-### v1.5.4 - 4.08.2018
-* dynamic effect removal fix
-
-### v1.5.3 - 4.07.2018
-* V4A Fix
-
-### v1.5.2 - 4.07.2018
-* Added materialized v4a
-* Use dynamic effect removal
-
-### v1.5.1 - 3.30.2018
-* Fix effect removals
-
-### v1.5 - 3.28.2018
-* Add soundalive and dha effect removal (needed for some samsung devices)
-* Pull ACP patch from ACP mod rather than static patch
-* Fine tuned osp patching
-
-### v1.4.8 - 3.22.2018
-* Replaced ubdr with redone ACP
-
-### v1.4.7 - 3.1.2018
-* Added new oreo Ice port
-
-### v1.4.6 - 3.1.2018
-* Fixed lib directory issue with sauron
-
-### v1.4.5 - 2.25.2018
-* Fixed vendor files in bootmode for devices with separate vendor partitions
-* Added detection of more policy files
-
-### v1.4.4 - 2.16.2018
-* Fix prop logic for prop files that have empty lines in them
-* Fix xml file music_helper/sa3d patching
-
-### v1.4.3 - 2.14.2018
-* Fix osp for htc and other weird devices
-* Get rid of vendor cfg creation - no need for it
-
-### v1.4.2 - 2.12.2018
-* More osp fixes
-
-### v1.4.1 - 2.9.2018
-* Attempt fix of osp
-* Added sa3d removal for samsung devices
-
-### v1.4 - 2.9.2018
-* Fixed osp typo
-
-### v1.3 - 2.8.2018
-* Fixed issues with output_session_processing patching
-
-### v1.2 - 2.7.2018
-* Fixed janky bootmode stuff
-* Fix uninstall/upgrade when a supported audio mod has just been upgraded in bootmode
-
-### v1.1 - 2.6.2018
-* Fixes for xml files
-* Various other fixes/improvements
-
-### v1.0 - 2.5.2018
-* REBIRTH and initial release
 
 ## Source Code
 * Module [GitHub](https://github.com/Zackptg5/Audio-Modification-Library)
+
+＃音频修改支持库
+AudModLib是能让Magisk中已安装的多个音频模块协调运作的框架。[了解更多](https://forum.xda-developers.com/apps/magisk/mod-audio-modification-library-t3745466)
+
+##更新日志
+### v1.8  -  7.20.2018
+*修复icewizard始终显示错误
+*添加用patch_cfgs函数替换库和效果的功能（-r）
+*将pre_processing patch_cfgs选项更改为-q
+*修复代理效果的错误
+*使用xml文件修复与osp的错误
+*修正squareound错误
+
+### v1.7.2  -  7.2.2018
+*更新了冰向导补丁
+*删除osp而不是注释掉
+
+### v1.7.1  -  6.27.2018
+*使用osp_detect修复错误 - 现在应修补所有cfgs
+
+### v1.7  -  6.19.2018
+*增加了对mixer_gains，audio_device和sapa_feature xml文件的支持
+*为自定义AML脚本添加了RUNONCE选项 - 允许它们只运行一次而不是每个音频cfg文件。如果您的mod没有cfg补丁，请使用此选项
+*添加了COUNT变量。自定义AML脚本可以使用它来确定脚本运行的次数。如果你的mod有cfg补丁和其他音频文件补丁，请使用此选项
+*修复了卸载文件恢复的旧bug
+*修复了启动脚本的错误
+*删除需要使用patch_cfgs函数指定文件 - 确保为此更新aml.sh脚本
+*添加了aninur squareound
+
+### v1.6.2  -  6.15.2018
+*修复了混合库/效果
+*修正了acp的错误
+
+### v1.6.1  -  6.15.2018
+*修复了xml文件的错误
+
+### v1.6  -  6.14.2018
+* Redid修补后端 - 非常感谢Rezmir99 @ xda-developers
+*完全集成的aml.sh功能 - 用户现在可以像在AudioModificationLibrary.sh脚本中那样使用patch_cfgs函数和LIBDIR变量 - 请参阅支持线程获取指令
+
+### v1.5.7  -  4.26.2018
+*新增功能，以让其能在magisk目录的根目录中导入任何带有“.aml.sh”文件的音频模块
+
+### v1.5.6  -  4.12.2018
+* 为有单独分区的设备做修复
+* misc修复
+
+### v1.5.5  -  4.12.2018
+* osp_detect修复
+
+### v1.5.4  -  4.08.2018
+*动态效果移除 修复
+
+### v1.5.3  -  4.07.2018
+* V4A修复
+
+### v1.5.2  -  4.07.2018
+*支持 V4A
+*使用动态效果消除
+
+### v1.5.1  -  3.30.2018
+*修复效果消失
+
+### v1.5  -  3.28.2018
+*添加声音和dha效果去除（一些三星设备需要）
+*从ACP mod而不是静态补丁中拉出ACP补丁
+*精细调整osp补丁
+
+### v1.4.8  -  3.22.2018
+*用重做ACP替换了ubdr
+
+### v1.4.7  -  3.1.2018
+*添加Oreo支持接口
+
+### v1.4.6  -  3.1.2018
+*修复了sauron的lib目录问题
+
+### v1.4.5  -  2.25.2018
+*修复部分有单独分区的引导模式相关文件
+*添加了更多策略文件的检测
+
+### v1.4.4  -  2.16.2018
+*修复文件中存在空行的处理逻辑
+*修复xml文件中关于music_helper / sa3d的项目
+
+### v1.4.3  -  2.14.2018
+*修复osp用于适配htc和其他一些独特的设备
+*移除Verdor cfg的创建 - 不需要
+
+### v1.4.2  -  2.12.2018
+*更多osp修复
+
+### v1.4.1  -  2.9.2018
+*尝试修复osp
+*为三星设备添加了sa3d移除功能
+
+### v1.4  -  2.9.2018
+*修正了osp错误
+
+### v1.3  -  2.8.2018
+*修复了output_session_processing补丁的问题
+
+### v1.2  -  2.7.2018
+*修正了janky引导模式的一些东西
+*修复了在引导模式中无法对音频模块进行卸载或升级
+
+### v1.1  -  2.6.2018
+*修复了xml文件
+*各种 修复/改进
+
+### v1.0  -  2.5.2018
+* 首次发布
+
+＃＃ 源代码
+*模块 [GitHub](https://github.com/Zackptg5/Audio-Modification-Library)
