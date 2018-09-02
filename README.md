@@ -1,3 +1,4 @@
+(个人感觉这个支持库的Readme并不需要汉化，所以大部分机翻+一部分自译)
 
 ## Source Code
 * Module [GitHub](https://github.com/Zackptg5/Audio-Modification-Library)
